@@ -1,0 +1,29 @@
+{
+  "name": "vtkach-dev",
+  "version": "1.0.0",
+  "description": "vtkach-dev.ru website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vtkach-dev/vtkach-dev.git"
+  },
+  "keywords": [
+    "vtkach-dev"
+  ],
+  "author": "Vasily Tkachik (tkachuk_v_a@mail.ru / vtkacuk066@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vtkach-dev/vtkach-dev/issues"
+  },
+  "homepage": "https://github.com/vtkach-dev/vtkach-dev#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "readline": "^1.3.0"
+  }
+}
