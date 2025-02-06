@@ -11,5 +11,5 @@ game.get('/quake1', (req, res) => {
 
 game.use('/WebQuake', express.static(join(dirname, 'game', 'quake1', 'WebQuake')));
 game.use('/id1', express.static(join(dirname, 'game', 'quake1', 'id1')));
-
+//wrgfrwegf
 export default game
