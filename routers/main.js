@@ -1,7 +1,6 @@
 import express from 'express';
 import path from 'path';
-
-const dirname = import.meta.dirname;
+import dirname from '../settings.js'
 
 const main = express.Router()
 const join = path.join.bind(this)
@@ -11,11 +10,9 @@ main.get('/', (req, res) => {
 })
 
 
-main.get('/quake1', (req, res) => {
-    res.sendFile(join(dirname, 'games', 'quake.htm'))
+main.get('/project/typing-trainer', (req, res) => {
+    //res.sendFile(join(dirname, 'project', 'typing-trainer', 'static', 'index.html'))
+    res.send('unfinished')
 })
-main.use('/', express.static(join(dirname, 'games')));
-
-
 
 export default main;

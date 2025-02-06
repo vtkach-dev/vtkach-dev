@@ -2,7 +2,8 @@ W = {};
 
 W.lumps = [];
 
-W.LoadWadFile = function (filename) {
+W.LoadWadFile = function(filename)
+{
 	var base = COM.LoadFile(filename);
 	if (base == null)
 		Sys.Error('W.LoadWadFile: couldn\'t load ' + filename);
@@ -12,7 +13,8 @@ W.LoadWadFile = function (filename) {
 	var numlumps = view.getUint32(4, true);
 	var infotableofs = view.getUint32(8, true);
 	var i, size, lump;
-	for (i = 0; i < numlumps; ++i) {
+	for (i = 0; i < numlumps; ++i)
+	{
 		size = view.getUint32(infotableofs + 4, true);
 		lump = new ArrayBuffer(size);
 		(new Uint8Array(lump)).set(new Uint8Array(base, view.getUint32(infotableofs, true), size));
@@ -21,7 +23,8 @@ W.LoadWadFile = function (filename) {
 	}
 };
 
-W.GetLumpName = function (name) {
+W.GetLumpName = function(name)
+{
 	var lump = W.lumps[name];
 	if (lump == null)
 		Sys.Error('W.GetLumpName: ' + name + ' not found');
